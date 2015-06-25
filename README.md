@@ -15,6 +15,5 @@ First, you need to copy the files that are on the external hard-drive to your ac
 `cd /home/ckavoekl/align_on_reference`<br>
 *Submit the "expand job":
 `qsub 01_scripts/jobs/expand.job.sh`
-<br><br>
-
+<br>
 ## Step 2 - Trimming reads according to sequencing quality thresholds (PHRED score > 2)
