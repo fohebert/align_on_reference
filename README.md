@@ -9,6 +9,5 @@ First, you need to copy the files that are on the external hard-drive to your ac
 
 *Copying the files from external hard-drive to raw data folder using the "[rsync](https://en.wikipedia.org/wiki/Rsync)" utility. Open a terminal window and type the following code:*<br><br>
 `rsync -avzP /Volumes/$HD/*.fastq.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br><br>
-**Note**
-* $HD = name of your external hard-drive<br> 
+**Note**: $HD = name of your external hard-drive<br> 
 
