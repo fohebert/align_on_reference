@@ -27,7 +27,7 @@ This step will clean the reads according to a sequencing quality threshold, i.e.
 * This will take **ALL** of the FASTQ files found in '02_raw_data/', trim/clean them and place the output files (i.e. trimmed read files) into the folder for the next step, i.e. 03_trimmed.
 * If you want to perform the analysis with only a subset of the data (to practice or test the pipeline), here is what you could do:<br><br>
 
-*From the main folder of the pipeline, create a folder in which you place all the read files except the few ones you want to work with*<br><br>
+*From the main folder of the pipeline, create a folder in which you place all the read files except the few ones you want to work with*:<br><br>
 `mkdir 02_raw_data/temp_samples`<br>
 `mv 02_raw_data/*.fastq 02_raw_data/temp_samples`<br>
 `mv 02_raw_data/temp_samples/*92S518*.fastq 02_raw_data/`<br>
@@ -37,4 +37,4 @@ This step will clean the reads according to a sequencing quality threshold, i.e.
 <br>
 ## Step 3 - Aligning the reads on the reference
 **Description**<br>
-This step will align the reads on the reference transcriptome (coding sequences, CDS), in this case the Nile tilapia ([Oreochromis niloticus](http://www.ensembl.org/Oreochromis_niloticus/Info/Index)). Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br>
+This step will align the reads on the reference transcriptome (coding sequences, CDS), in this case the Nile tilapia (*[Oreochromis niloticus]*(http://www.ensembl.org/Oreochromis_niloticus/Info/Index)). Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br>
