@@ -34,6 +34,8 @@ This step will clean the reads according to a sequencing quality threshold, i.e.
 *And then submit the job*:<br>
 `qsub 01_scripts/jobs/01_trimming.job.sh`
 
+This will allow you to continue the pipeline with sample number 92S51.
+
 ## Step 3 - Aligning the reads on the reference
 **Description**<br>
 This step will align the reads on the reference transcriptome (coding sequences, CDS), in this case the Nile tilapia ([*Oreochromis niloticus*](http://www.ensembl.org/Oreochromis_niloticus/Info/Index)). Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br><br>
