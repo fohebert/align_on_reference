@@ -11,9 +11,14 @@ First, you need to copy the files that are on the external hard-drive to your ac
 `rsync -avzP /Volumes/$HD/*.fastq.tar.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br><br>
 **Note**: $HD = name of your external hard-drive<br> 
 
-*First, go to the pipeline main folder:*<br><br>
+*1.1 First, go to the pipeline main folder:*<br><br>
 `cd /home/ckavoekl/align_on_reference`<br><br>
-*Submit the "expand job":<br><br>
+*1.2 Submit the "expand job":<br><br>
 `qsub 01_scripts/jobs/expand.job.sh`
 <br>
-## Step 2 - Trimming reads according to sequencing quality thresholds (PHRED score > 2)
+## Step 2 - Trimming reads (PHRED score > 2)
+**Description**<br>
+This step will clean the reads according to a sequencing quality threshold, i.e. PHRED score greater than 2. Trimmomatic will discard the bases from both ends that show a sequencing quality below the user-defined threshold. In this case, the threshold is quite low (PHRED > 2). Agressive trimming leads to loss of important information, so the threshold is set low. Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br>
+
+*2.1 Submitting the trimming job:<br><br>
+`qsub 01_scripts/jobs/01_trimming.job.sh`<br><br>
