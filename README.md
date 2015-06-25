@@ -1,4 +1,4 @@
-## RNA-seq pipeline - cleaning & Mapping on a reference transcriptome
+# RNA-seq pipeline - cleaning & Mapping on a reference transcriptome
 
-# General Description
+## General Description
 First line
