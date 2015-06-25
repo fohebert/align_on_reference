@@ -9,11 +9,11 @@ First, you need to copy the files that are on the external hard-drive to your ac
 
 *Copying the files from external hard-drive to raw data folder using the "[rsync](https://en.wikipedia.org/wiki/Rsync)" utility. Open a terminal window and type the following code:*<br><br>
 `rsync -avzP /Volumes/$HD/*.fastq.tar.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br><br>
-**Note**: $HD = name of your external hard-drive<br>
+*NOTE*: $HD = name of your external hard-drive<br>
 
-*1.1 First, go to the pipeline main folder:*<br><br>
+**1.1 First, go to the pipeline main folder**:<br><br>
 `cd /home/ckavoekl/align_on_reference`<br><br>
-*1.2 Submit the expand job:<br><br>
+**1.2 Submit the expand job**:<br><br>
 `qsub 01_scripts/jobs/expand.job.sh`
 <br>
 ## Step 2 - Trimming reads (PHRED score > 2)
