@@ -5,7 +5,7 @@ This pipeline was designed to clean raw read files and map them back on a refere
 <br>
 ## Step 1 - Copying and expanding raw files
 **Description**<br>
-First, you need to copy the files that are on the external hard-drive to your account on KATAK, in the "raw data" folder of the pipeline. Here's how you can perform this task:<br><br>
+First, you need to copy the files that are on the external hard-drive to your account on KATAK, in the "raw data" folder of the pipeline. Here's how you can perform this task:<br>
 
-*Copying the files from external hard-drive to raw data folder using the "rsync" utility (for more info: https://en.wikipedia.org/wiki/Rsync)*
+*Copying the files from external hard-drive to raw data folder using the "rsync" utility ([click for more info]:https://en.wikipedia.org/wiki/Rsync)*
 'rsync -avzP '
