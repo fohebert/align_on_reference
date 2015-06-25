@@ -11,9 +11,9 @@ First, you need to copy the files that are on the external hard-drive to your ac
 `rsync -avzP /Volumes/$HD/*.fastq.tar.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br><br>
 **Note**: $HD = name of your external hard-drive<br> 
 
-*Expand the files, but first, go to the pipeline main folder:*<br><br>
+*Expand the files, but first, go to the pipeline main folder:*<br>
 `cd /home/ckavoekl/align_on_reference`<br>
-*Submit the "expand job":
+*Submit the "expand job":<br>
 `qsub 01_scripts/jobs/expand.job.sh`
 <br>
 ## Step 2 - Trimming reads according to sequencing quality thresholds (PHRED score > 2)
