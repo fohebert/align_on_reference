@@ -7,5 +7,8 @@ This pipeline was designed to clean raw read files and map them back on a refere
 **Description**<br>
 First, you need to copy the files that are on the external hard-drive to your account on KATAK, in the "raw data" folder of the pipeline. Here's how you can perform this task:<br>
 
-*Copying the files from external hard-drive to raw data folder using the "[rsync](https://en.wikipedia.org/wiki/Rsync)" utility*<br>
-`rsync -avzP `
+*Copying the files from external hard-drive to raw data folder using the "[rsync](https://en.wikipedia.org/wiki/Rsync)" utility. Open a terminal window and type the following code:*<br>
+`rsync -avzP /Volumes/$HD/*.fastq.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br>
+**Note**<br>
+* $HD = name of your external hard-drive<br>
+
