@@ -11,27 +11,27 @@ First, you need to copy the files that are on the external hard-drive to your ac
 `rsync -avzP /Volumes/$HD/*.fastq.tar.gz ckavoekl@ibis.ulaval.ca:/home/ckavoek1/align_on_reference/02_raw_data`<br><br>
 *NOTE*: $HD = name of your external hard-drive<br>
 
-**1.1 First, go to the pipeline main folder**:<br><br>
+**1.1 First, go to the pipeline main folder**:<br>
 `cd /home/ckavoekl/align_on_reference`<br><br>
-**1.2 Submit the expand job**:<br><br>
+**1.2 Submit the expand job**:<br>
 `qsub 01_scripts/jobs/00_expand.job.sh`
 <br>
 ## Step 2 - Trimming reads (PHRED score > 2)
 **Description**<br>
 This step will clean the reads according to a sequencing quality threshold, i.e. PHRED score greater than 2. Trimmomatic will discard the bases from both ends that show a sequencing quality below the user-defined threshold. In this case, the threshold is quite low (PHRED > 2). Agressive trimming leads to loss of important information, so the threshold is set low. Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br>
 
-*2.1 Submit the trimming job:*<br><br>
+*2.1 Submit the trimming job:*<br>
 `qsub 01_scripts/jobs/01_trimming.job.sh`<br><br>
 
 **IMPORTANT NOTE - COMPLETING THE PIPELINE WITH A SUBSET OF THE DATA**<br>
 * That last command line will take **ALL** of the FASTQ files found in '02_raw_data/', trim/clean them and place the output files (i.e. trimmed read files) into the folder for the next step, i.e. 03_trimmed.
 * If you want to perform the analysis with only a subset of the data to practice or test the pipeline, here is what you could do:<br><br>
 
-*From the main folder of the pipeline, create a folder in which you place all the read files except the few ones you want to work with*:<br><br>
+*From the main folder of the pipeline, create a folder in which you place all the read files except the few ones you want to work with*:<br>
 `mkdir 02_raw_data/temp_samples # Creates the folder`<br>
 `mv 02_raw_data/*.fastq 02_raw_data/temp_samples # Places all the read files in the temporary folder`<br>
 `mv 02_raw_data/temp_samples/*92S518*.fastq 02_raw_data/ # Moves sample number 92S518 back in the raw_data directory`<br><br>
-*And then submit the job*:<br><br>
+*And then submit the job*:<br>
 `qsub 01_scripts/jobs/01_trimming.job.sh`
 
 This will allow you to continue the pipeline with sample number 92S51 only.
