@@ -30,7 +30,7 @@ This step will clean the reads according to a sequencing quality threshold, i.e.
 *From the main folder of the pipeline, create a folder in which you place all the read files except the few ones you want to work with*:<br><br>
 `mkdir 02_raw_data/temp_samples # Creates the folder`<br>
 `mv 02_raw_data/*.fastq 02_raw_data/temp_samples # Places all the read files in the temporary folder`<br>
-`mv 02_raw_data/temp_samples/*92S518*.fastq 02_raw_data/ # Moves sample number 92S518 back in the raw_data directory`<br>
+`mv 02_raw_data/temp_samples/*92S518*.fastq 02_raw_data/ # Moves sample number 92S518 back in the raw_data directory`<br><br>
 *And then submit the job*:<br>
 `qsub 01_scripts/jobs/01_trimming.job.sh`
 
