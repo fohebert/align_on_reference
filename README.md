@@ -52,7 +52,7 @@ This last script should produce an output file called `samples.read-count.tsv` i
 
 ## Step 5 - Annotation
 **Description**<br>
-There is no extensive annotation step in this pipeline since the tilapia genome is used as the reference. The cool thing is that an annotation file already exists. You can find it in:<br><br>
+There is no extensive annotation step in this pipeline since the tilapia genome is used as the reference. The cool thing is that an annotation file already exists. You can find it in:<br>
 
 `02_raw_data/tilapia_genome/ensembl.annotation.txt`
 <!---->
