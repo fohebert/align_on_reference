@@ -48,5 +48,11 @@ This step will allow you to produce a count matrix based on the SAM files genera
 
 `qsub 01_scripts/jobs/03_read_counts.job.sh`<br>
 <br>
-This last script should produce an output file called `samples.read-count.tsv` in the folder `05_read_counts`. This output file is the actual matrix that you need as the input file in edgeR or limma. ROWS = genes ("reference sequences"), COLUMNS = samples.
+This last script should produce an output file called `samples.read-count.tsv` in the folder `05_read_counts`. This output file is the actual matrix that you need as the input file in edgeR or limma. ROWS = genes ("reference sequences"), COLUMNS = samples.<br>
+
+## Step 5 - Annotation
+**Description**<br>
+There is no extensive annotation step in this pipeline since the tilapia genome is used as the reference. The cool thing is that an annotation file already exists. You can find it in:<br><br>
+
+`02_raw_data/tilapia_genome/ensembl.annotation.txt`
 <!---->
