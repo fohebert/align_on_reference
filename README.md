@@ -31,7 +31,7 @@ This step will clean the reads according to a sequencing quality threshold, i.e.
 `mkdir 02_raw_data/temp_samples # Creates the folder`<br>
 `mv 02_raw_data/*.fastq 02_raw_data/temp_samples # Places all the read files in the temporary folder`<br>
 `mv 02_raw_data/temp_samples/*92S518*.fastq 02_raw_data/ # Moves sample number 92S518 back in the raw_data directory`<br><br>
-*And then submit the job*:<br>
+*And then submit the job*:<br><br>
 `qsub 01_scripts/jobs/01_trimming.job.sh`
 
 This will allow you to continue the pipeline with sample number 92S51 only.
