@@ -21,7 +21,7 @@ First, you need to copy the files that are on the external hard-drive to your ac
 This step will clean the reads according to a sequencing quality threshold, i.e. PHRED score greater than 2. Trimmomatic will discard the bases from both ends that show a sequencing quality below the user-defined threshold. In this case, the threshold is quite low (PHRED > 2). Agressive trimming leads to loss of important information, so the threshold is set low. Still from the main folder of the pipeline (i.e. /home/ckavoek1/align_on_reference), here's how you can perform this task:<br>
 
 *2.1 Submit the trimming job:*<br><br>
-`qsub 01_scripts/jobs/01_trimming.job.sh`<br><br>
+`qsub 01_scripts/jobs/01_trimming_job.sh`<br><br>
 
 **IMPORTANT NOTE - COMPLETING THE PIPELINE WITH A SUBSET OF THE DATA**<br>
 * That last command line will take **ALL** of the FASTQ files found in '02_raw_data/', trim/clean them and place the output files (i.e. trimmed read files) into the folder for the next step, i.e. 03_trimmed.
