@@ -3,7 +3,7 @@
 TRIMMED_READS="03_trimmed"
 REFERENCE="02_raw_data"
 MAPPED="04_mapping_bwa"
-PROJECT_NAME=$(ls -1 $REFERENCE/*.fasta | sed 's/02_raw_data\///g' | sed 's/\.cdna.all\.fasta//g')
+PROJECT_NAME=$(ls -1 $REFERENCE/*.fasta | sed 's/02_raw_data\///g' | sed 's/\.cdna.fasta//g')
 
 # Indexing reference sequences in the FASTA format
 cp $REFERENCE/*.fasta $TRIMMED
