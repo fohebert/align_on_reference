@@ -10,8 +10,8 @@ PROJECT_NAME=$(ls -1 $REFERENCE/*.fasta | sed 's/02_raw_data\///g' | sed 's/\.en
 #bwa index -p $PROJECT_NAME $TRIMMED/*.fasta
 
 # Performing the alignment (mapping)
-for file in `ls -1 $TRIMMED/*_R1.paired.fastq | sed 's/_R1\.fastq//g'`; do
-    bwa mem -t 10 $PROJECT_NAME $TRIMMED/${file}_R1.paired.fastq $TRIMMED/${file}_R2.paired.fastq >${file}.sam
+for file in `ls -1 $TRIMMED/*_R1.paired.fastq | sed 's/_R1\.paired\.fastq//g'`; do
+    bwa mem -t 10 $PROJECT_NAME ${file}_R1.paired.fastq ${file}_R2.paired.fastq >${file}.sam
 done
 
 # Cleaning up
