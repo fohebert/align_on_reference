@@ -1,1 +1,8 @@
-
+*.fastq
+*.sam
+*.fastq.tar.gz
+*.o*
+*.e*
+*.pe*
+*.po*
+*~
