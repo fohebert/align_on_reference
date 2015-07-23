@@ -15,9 +15,4 @@ for file in `ls -1 $TRIMMED/*_R1.paired.fastq | sed 's/_R1\.paired\.fastq//g'`; 
 done
 
 # Cleaning up
-mv $TRIMMED/*.sam $MAPPED
-mv $TRIMMED/*.sa $MAPPED
-mv $TRIMMED/*.amb $MAPPED
-mv $TRIMMED/*.ann $MAPPED
-mv $TRIMMED/*.bwt $MAPPED
-mv $TRIMMED/*.pac $MAPPED
+mv $TRIMMED/*.{sam,sa,amb,ann,bwt,pac} $MAPPED
